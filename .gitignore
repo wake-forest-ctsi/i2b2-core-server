@@ -1,6 +1,7 @@
 *.project
 *.class
 .*
+!.dockerignore
 **/gensrc/**/*.java
 **/dist/*
 **/test-reports/**/*.html
