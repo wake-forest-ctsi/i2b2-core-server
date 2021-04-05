@@ -20,7 +20,7 @@ RUN cd ./edu.harvard.i2b2.server-common && \
 FROM jboss/wildfly:${JBOSS_VERSION}
 
 COPY  --from=builder --chown=jboss:jboss /app/edu.harvard.i2b2.server-common/dist/i2b2.war ./wildfly/standalone/deployments
-COPY --chown=jboss:jboss ./edu.harvard.i2b2.server-common/lib/jdbc/* ./wildfly/standalone/deployments
+COPY --chown=jboss:jboss ./edu.harvard.i2b2.server-common/lib/jdbc/* ./wildfly/standalone/deployments/
 
 # remove these in favor of using jboss CLI
 COPY --chown=jboss:jboss ./edu.harvard.i2b2.crc/etc/jboss/crc-ds.xml ./wildfly/standalone/deployments
