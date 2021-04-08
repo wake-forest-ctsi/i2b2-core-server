@@ -144,183 +144,183 @@
                         <password>sa</password>
                     </security>
                 </datasource>
+                <datasource jta="false" jndi-name="java:/CRCBootStrapDS"
+                    pool-name="CRCBootStrapDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_HIVE_USER}</user-name>
+                        <password>${env.DS_HIVE_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/QueryToolDemoDS"
+                    pool-name="QueryToolDemoDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_CRC_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_CRC_USER}</user-name>
+                        <password>${env.DS_CRC_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/IMBootStrapDS"
+                    pool-name="IMBootStrapDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_HIVE_USER}</user-name>
+                        <password>${env.DS_HIVE_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/IMDemoDS"
+                    pool-name="IMDemoDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_IM_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_IM_USER}</user-name>
+                        <password>${env.DS_IM_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/OntologyBootStrapDS"
+                    pool-name="OntologyBootStrapDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_HIVE_USER}</user-name>
+                        <password>${env.DS_HIVE_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/OntologyDemoDS"
+                    pool-name="OntologyDemoDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_META_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_META_USER}</user-name>
+                        <password>${env.DS_META_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/PMBootStrapDS"
+                    pool-name="PMBootStrapDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_PM_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_PM_USER}</user-name>
+                        <password>${env.DS_PM_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/WorkplaceBootStrapDS"
+                    pool-name="WorkplaceBootStrapDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_HIVE_USER}</user-name>
+                        <password>${env.DS_HIVE_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/WorkplaceDemoDS"
+                    pool-name="WorkplaceDemoDS" enabled="true" use-ccm="false">
+                    <connection-url>${env.DS_WORK_URL,env.DS_DEFAULT_URL}</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>ojdbc8.jar</driver>
+                    <security>
+                        <user-name>${env.DS_WORK_USER}i2b2workdata</user-name>
+                        <password>${env.DS_WORK_PASS}</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>10000</background-validation-millis>
+                    </validation> 
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
                     </driver>
                 </drivers>
             </datasources>
-            <datasource jta="false" jndi-name="java:/CRCBootStrapDS"
-                pool-name="CRCBootStrapDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_HIVE_USER}</user-name>
-                    <password>${env.DS_HIVE_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/QueryToolDemoDS"
-                pool-name="QueryToolDemoDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_CRC_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_CRC_USER}</user-name>
-                    <password>${env.DS_CRC_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/IMBootStrapDS"
-                pool-name="IMBootStrapDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_HIVE_USER}</user-name>
-                    <password>${env.DS_HIVE_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/IMDemoDS"
-                pool-name="IMDemoDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_IM_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_IM_USER}</user-name>
-                    <password>${env.DS_IM_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/OntologyBootStrapDS"
-                pool-name="OntologyBootStrapDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_HIVE_USER}</user-name>
-                    <password>${env.DS_HIVE_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/OntologyDemoDS"
-                pool-name="OntologyDemoDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_META_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_META_USER}</user-name>
-                    <password>${env.DS_META_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/PMBootStrapDS"
-                pool-name="PMBootStrapDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_PM_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_PM_USER}</user-name>
-                    <password>${env.DS_PM_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/WorkplaceBootStrapDS"
-                pool-name="WorkplaceBootStrapDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_HIVE_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_HIVE_USER}</user-name>
-                    <password>${env.DS_HIVE_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
-            <datasource jta="false" jndi-name="java:/WorkplaceDemoDS"
-                pool-name="WorkplaceDemoDS" enabled="true" use-ccm="false">
-                <connection-url>${env.DS_WORK_URL,env.DS_DEFAULT_URL}</connection-url>
-                <driver-class>oracle.jdbc.OracleDriver</driver-class>
-                <driver>ojdbc8.jar</driver>
-                <security>
-                    <user-name>${env.DS_WORK_USER}i2b2workdata</user-name>
-                    <password>${env.DS_WORK_PASS}</password>
-                </security>
-                <validation>
-                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
-                    <validate-on-match>false</validate-on-match>
-                    <background-validation>true</background-validation>
-                    <background-validation-millis>10000</background-validation-millis>
-                </validation> 
-                <statement>
-                    <share-prepared-statements>false</share-prepared-statements>
-                </statement>
-            </datasource>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
             <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" runtime-failure-causes-rollback="${jboss.deployment.scanner.rollback.on.failure:false}"/>

@@ -22,19 +22,19 @@ FROM jboss/wildfly:${JBOSS_VERSION}
 COPY  --from=builder --chown=jboss:jboss /app/edu.harvard.i2b2.server-common/dist/i2b2.war ./wildfly/standalone/deployments
 COPY --chown=jboss:jboss ./edu.harvard.i2b2.server-common/lib/jdbc/* ./wildfly/standalone/deployments/
 
-ENV DS_DEFAULT_URL=${DS_DEFAULT_URL:-jdbc:oracle:thin:@localhost:1521:XE}
-ENV DS_CRC_USER=${DS_CRC_USER:-i2b2demodata}
-ENV DS_CRC_PASS=${DS_CRC_PASS:-demodata}
-ENV DS_HIVE_USER=${DS_HIVE_USER:-i2b2hive}
-ENV DS_HIVE_PASS=${DS_HIVE_PASS:-demodata}
-ENV DS_IM_USER=${DS_IM_USER:-i2b2im}
-ENV DS_IM_PASS=${DS_IM_PASS:-demodata}
-ENV DS_META_USER=${DS_META_USER:-i2b2meta}
-ENV DS_META_PASS=${DS_META_PASS:-demodata}
-ENV DS_PM_USER=${DS_PM_USER:-i2b2pm}
-ENV DS_PM_PASS=${DS_PM_PASS:-demodata}
-ENV DS_WORK_USER=${DS_WORK_USER:-i2b2work}
-ENV DS_WORK_PASS=${DS_WORK_PASS:-demodata}
+ENV DS_DEFAULT_URL=${DS_DEFAULT_URL:-jdbc:oracle:thin:@localhost:1521:XE} \
+    DS_CRC_USER=${DS_CRC_USER:-i2b2demodata} \
+    DS_CRC_PASS=${DS_CRC_PASS:-demodata} \
+    DS_HIVE_USER=${DS_HIVE_USER:-i2b2hive} \
+    DS_HIVE_PASS=${DS_HIVE_PASS:-demodata} \
+    DS_IM_USER=${DS_IM_USER:-i2b2im} \
+    DS_IM_PASS=${DS_IM_PASS:-demodata} \
+    DS_META_USER=${DS_META_USER:-i2b2meta} \
+    DS_META_PASS=${DS_META_PASS:-demodata} \
+    DS_PM_USER=${DS_PM_USER:-i2b2pm} \
+    DS_PM_PASS=${DS_PM_PASS:-demodata} \
+    DS_WORK_USER=${DS_WORK_USER:-i2b2work} \
+    DS_WORK_PASS=${DS_WORK_PASS:-demodata}
 
 # remove these in favor of using jboss CLI
 # COPY --chown=jboss:jboss ./edu.harvard.i2b2.crc/etc/jboss/crc-ds.xml ./wildfly/standalone/deployments
