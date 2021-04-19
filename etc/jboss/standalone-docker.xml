@@ -302,7 +302,7 @@
                     <driver-class>oracle.jdbc.OracleDriver</driver-class>
                     <driver>ojdbc8.jar</driver>
                     <security>
-                        <user-name>${env.DS_WORK_USER}i2b2workdata</user-name>
+                        <user-name>${env.DS_WORK_USER}</user-name>
                         <password>${env.DS_WORK_PASS}</password>
                     </security>
                     <validation>
